@@ -2,7 +2,7 @@
 
 ## Summary
 
-The simple 2D A-Star package is an easy to use pathfinding solution for tilemaps that allows you to quickly implement pathfinding for your game. It supports 'hexagon', 'rectangle' and 'isometric' grid layouts as well as all cell swizzle options but doesn't fully support tilemaps that utilise the z-position of the grid yet, like 'isometric z as y'.<br><br>
+The simple 2D A-Star package is an easy to use pathfinding solution for tilemaps that allows you to quickly implement pathfinding for your game. It supports 'hexagon', 'rectangle' and 'isometric' grid layouts but doesn't fully support tilemaps that utilise the z-position of the grid yet, like 'isometric z as y'.<br><br>
 **Features Include:**
 * **Advanced Neighbour Selection**: You have the option to change how graph nodes are connected to one another such as only moving diagonally or orthogonally and even preventing diagonal movement if it means traversing over empty tiles.
 * **Automatic Graph Building**: Which when left enabled will automatically update the A-Star graph every time you enter play mode or when you build the project.
