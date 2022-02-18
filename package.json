@@ -1,0 +1,15 @@
+{
+  "name": "explosivejames.simple2dastar",
+  "version": "0.9.0",
+  "displayName": "Simple 2D A-Star",
+  "description": "A-Star pathfinding package for tilemaps.",
+  "keywords": [
+    "Simple",
+    "AStar"
+  ],
+  "author": {
+    "name": "Explosive James",
+    "email": "theexplosivejames@gmail.com"
+  },
+  "type": "tests"
+}
