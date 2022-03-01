@@ -53,7 +53,7 @@ Then inside another script, such as a player contoller or AI controller, you nee
 
 Then to find a path, access the pathfinder variable and call the 'FindPath' function and give it the start and end position in world position and it will return a Vector3[] of node positions in world space to follow to get from the start position to the end position. If the pathfinder cannot find a path it will return an empty Vector3[] with the length of 0, it will not return null.
 
-    private AStarPathfinder = pathfinder;
+    private AStarPathfinder pathfinder;
 
     public Vector3 targetPosition;
     private Vector3[] path;
