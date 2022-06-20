@@ -16,11 +16,11 @@ namespace Simple2D_AStar.Internal
 
         #region Properties
         /// <summary>
-        /// The score / distance to the goal.
+        /// The score / distance to home.
         /// </summary>
         public float GScore { get; set; }
         /// <summary>
-        /// The score / distance to home.
+        /// The score / distance to the goal.
         /// </summary>
         public float HScore { get; set; }
 

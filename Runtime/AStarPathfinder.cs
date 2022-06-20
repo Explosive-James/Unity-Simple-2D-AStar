@@ -52,18 +52,29 @@ namespace Simple2D_AStar
                 }
 
                 // Finding neighbours we have not searched yet.
-                foreach (GraphNode neighbour in currentNode.builtNeighbours)
+                foreach (GraphNode neighbour in currentNode.builtNeighbours) {
+
+                    // Calculating the gscore to check if it found a shorter path to the neighbour.
+                    float currentGscore = currentNode.GScore + CalculateDistance(currentNode.tilePosition, neighbour.tilePosition);
+
                     if (!closeList.ContainsKey(neighbour)) {
 
                         // Calculating hscore and gscore to find the best node to search next.
-                        neighbour.HScore = currentNode.HScore + CalculateDistance(currentNode.tilePosition, neighbour.tilePosition);
-                        neighbour.GScore = CalculateDistance(neighbour.tilePosition, endNode.tilePosition);
+                        neighbour.HScore = CalculateDistance(neighbour.tilePosition, endNode.tilePosition);
+                        neighbour.GScore = currentGscore;
 
                         // Adding neighbour to the search list.
                         openList.Add(neighbour);
                         // connecting the neighbour node to it's 'parent' that helps build the final path.
                         closeList.Add(neighbour, currentNode);
                     }
+                    else if (neighbour.GScore > currentGscore) {
+                    
+                        // Updating the better g score and connection to the close list.
+                        neighbour.GScore = currentGscore;
+                        closeList[neighbour] = currentNode;
+                    }
+                }
             }
 
             // Path was not found.
